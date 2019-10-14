@@ -5,6 +5,11 @@ How to install keycloak on kubernetes
 NAMESPACE=key
 kubectl create namespace "${NAMESPACE}"
 kubectl -n "${NAMESPACE}" apply -f keycloak.yaml
+kubectl -n "${NAMESPACE}" get service
+URL=$(kubectl -n key get service | awk '{print $4}' | tail -n1)
+echo "Point your browser to:"
+echo $URL:8080
 ```
-Login to keycloak and import realm
+Navigate to admin console
+Login to keycloak with **admin/admin** as credentials and import realm
 
