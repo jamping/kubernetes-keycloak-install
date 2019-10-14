@@ -11,5 +11,9 @@ echo "Point your browser to:"
 echo $URL:8080
 ```
 Navigate to admin console
-Login to keycloak with **admin/admin** as credentials and import realm
+Login to keycloak with **admin/admin** as credentials.
+
+[OPTIONAL] Set "Login->Require SSL" to "none" -> "Save".
+
+Import realm as: Top-left-corder -> Add Realm -> Select file -> dev-realm-spec.json -> Create
 
